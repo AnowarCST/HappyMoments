@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
-  <link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery.mobile-1.4.0.min.js"></script>
-  <script src="js/jquery.ui.datepicker.js"></script>
-  <script src="js/jquery.mobile.datepicker.js"></script>
-  <script type="text/javascript" src="cordova.js"></script>
-  <script>
-$(document).bind("mobileinit", function(){
-  $.mobile.touchOverflowEnabled = true;
-});
-</script>
-</head>
-<body>
-  <div data-role="page">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.0.min.js"></script>
+        <script src="js/jquery.ui.datepicker.js"></script>
+        <script src="js/jquery.mobile.datepicker.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script>
+            $(document).bind("mobileinit", function() {
+                $.mobile.touchOverflowEnabled = true;
+                app.initialize();
+                var api = 'http://ihnlbd.com/happy_moment_api/';
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page">
 
-    <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push"></div>
+            <div data-role="panel" id="panel" data-position="right" data-theme="a" data-display="push"></div>
 
-    <div data-role="header" data-theme="e">
-      <h1>Happy Memories From Space</h1>
-    </div>
+            <div data-role="header" data-theme="e">
+                <h1>Happy Memories From Space</h1>
+            </div>
 
-    <div data-role="content" role="main">
-<form action="process.cfm" method="post">
- 
-			<fieldset data-role="fieldcontain"> 
-				<label for="username">Receiver's Email:</label>
-				<input type="email" name="email" id="email" data-mini="true">
-			</fieldset>
- 
-			<fieldset data-role="fieldcontain" class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"> 
-				<label for="password">Date and Time:</label>
-				<input data-role="date" type="text" data-mini="true">
-			</fieldset>
+            <div data-role="content" role="main">
+                <form action="data.php" method="post">
 
-			<fieldset data-role="fieldcontain"> 
-				<label for="favcolor">Photo Type:</label>
-				<select id="favcolor" name="favcolor" data-theme="e" data-mini="true" data-native-menu="false">
-					<option>Choose from List</option>
-					<option>sun</option>
-					<option>galaxies</option>
-					<option>planets</option>
-					<option>collages</option>
-				</select>
-			</fieldset>
-			
-			<fieldset data-role="fieldcontain"> 
-				<label for="username">Text in Card:</label>
-				 <textarea name="addinfo" id="info" data-mini="true"></textarea>
-			</fieldset>
+                    <fieldset data-role="fieldcontain"> 
+                        <label for="username">Receiver's Email:</label>
+                        <input type="email" name="email" id="email" data-mini="true">
+                    </fieldset>
 
-        <div data-role="fieldcontain">
-		<input type="submit" data-inline="true" data-theme="e" value="Send">
-		<input type="submit" data-inline="true" data-theme="f" value="Share in facebook" >
-		<input type="submit" data-inline="true" data-theme="d" value="Share in twitter">
-		</div>
-		</form>
-      <div data-role="fieldcontain">
-			    <a href="#myPopup" data-rel="popup" data-position-to="window">
-    <img src="UlyssesImage.jpg" alt="Skaret View" style="width:100px;"></a>
+                    <fieldset data-role="fieldcontain"> 
+                        <label for="password">Date and Time:</label>
+                        <input data-role="date" type="text" data-mini="true">
+                    </fieldset>
 
-    <div data-role="popup" id="myPopup">
-      <p>ULYSSES</p> 
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="UlyssesImage.jpg" style="width:800px;height:400px;" alt="Skaret View">
-    </div>
-	<a href="#myPopup1" data-rel="popup" data-position-to="window">
-    <img src="result_swoops.jpg" alt="Skaret View" style="width:100px;"></a>
+                    <fieldset data-role="fieldcontain"> 
+                        <label for="wish_type">Photo Type:</label>
+                        <select id="wish_type" name="wish_type" data-theme="e" data-mini="false">
+                            <option>Choose from List</option>
+                        </select>
+                    </fieldset>
 
-    <div data-role="popup" id="myPopup1">
-      <p>ULYSSES First Orbit</p> 
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="result_swoops.jpg" style="width:800px;height:400px;" alt="Skaret View">
-    </div>
-		<a href="#myPopup2" data-rel="popup" data-position-to="window">
-    <img src="990295_COBE_Sat_320.jpg" alt="Skaret View" style="width:100px;"></a>
+                    <fieldset data-role="fieldcontain"> 
+                        <label for="username">Text in Card:</label>
+                        <textarea name="addinfo" id="info" data-mini="true"></textarea>
+                    </fieldset>
 
-    <div data-role="popup" id="myPopup2">
-      <p>COBE Satellite Orbit</p> 
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="990295_COBE_Sat_320.jpg" style="width:800px;height:400px;" alt="Skaret View">
-    </div>
-	</div>
-    </div>
-	</div>
-</body>
+                    <div data-role="fieldcontain">
+                        <input type="submit" data-inline="true" data-theme="e" value="Send">
+                        <input type="submit" data-inline="true" data-theme="f" value="Share in facebook" >
+                        <input type="submit" data-inline="true" data-theme="d" value="Share in twitter">
+                    </div>
+                </form>
+                <div data-role="fieldcontain">
+                    <a href="#myPopup" data-rel="popup" data-position-to="window">
+                        <img src="UlyssesImage.jpg" alt="Skaret View" style="width:100px;"></a>
+
+                    <div data-role="popup" id="myPopup">
+                        <p>ULYSSES</p> 
+                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="UlyssesImage.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                    </div>
+                    <a href="#myPopup1" data-rel="popup" data-position-to="window">
+                        <img src="result_swoops.jpg" alt="Skaret View" style="width:100px;"></a>
+
+                    <div data-role="popup" id="myPopup1">
+                        <p>ULYSSES First Orbit</p> 
+                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="result_swoops.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                    </div>
+                    <a href="#myPopup2" data-rel="popup" data-position-to="window">
+                        <img src="990295_COBE_Sat_320.jpg" alt="Skaret View" style="width:100px;"></a>
+
+                    <div data-role="popup" id="myPopup2">
+                        <p>COBE Satellite Orbit</p> 
+                        <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="990295_COBE_Sat_320.jpg" style="width:800px;height:400px;" alt="Skaret View">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+<script type="text/javascript" src="js/custom.js"></script>
 </html>
