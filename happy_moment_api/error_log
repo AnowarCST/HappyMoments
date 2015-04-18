@@ -1,0 +1,13 @@
+[10-Apr-2015 11:18:28 America/Chicago] PHP Warning:  mysqli::query(): Empty query in /home/ihnlbd/public_html/happy_moment_api/search.php on line 33
+[10-Apr-2015 11:19:45 America/Chicago] PHP Warning:  mysqli::query(): Empty query in /home/ihnlbd/public_html/happy_moment_api/search.php on line 33
+[10-Apr-2015 11:20:34 America/Chicago] PHP Warning:  mysqli::query(): Empty query in /home/ihnlbd/public_html/happy_moment_api/search.php on line 34
+[10-Apr-2015 11:20:50 America/Chicago] PHP Warning:  mysqli::query(): Empty query in /home/ihnlbd/public_html/happy_moment_api/search.php on line 34
+[10-Apr-2015 11:21:36 America/Chicago] PHP Fatal error:  Call to undefined function response_exit() in /home/ihnlbd/public_html/happy_moment_api/search.php on line 31
+[10-Apr-2015 11:24:48 America/Chicago] PHP Fatal error:  Call to undefined function mysqli_fetch_all() in /home/ihnlbd/public_html/happy_moment_api/search.php on line 51
+[10-Apr-2015 11:25:12 America/Chicago] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/ihnlbd/public_html/happy_moment_api/search.php on line 51
+[10-Apr-2015 11:25:29 America/Chicago] PHP Fatal error:  Call to undefined method mysqli_result::mysqli_fetch_all() in /home/ihnlbd/public_html/happy_moment_api/search.php on line 51
+[10-Apr-2015 11:28:41 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/ihnlbd/public_html/happy_moment_api/search.php on line 10
+[10-Apr-2015 11:30:31 America/Chicago] PHP Warning:  mysqli::query(): Empty query in /home/ihnlbd/public_html/happy_moment_api/search.php on line 35
+[10-Apr-2015 15:56:06 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ihnlbd/public_html/happy_moment_api/search.php on line 39
+[10-Apr-2015 15:56:13 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ihnlbd/public_html/happy_moment_api/search.php on line 39
+[10-Apr-2015 15:56:36 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ihnlbd/public_html/happy_moment_api/search.php on line 39
